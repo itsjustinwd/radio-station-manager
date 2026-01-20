@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Radio Station Manager
  * Description: Complete radio station management system with scheduling, hosts, hero sliders, and concert calendars
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author: JustinWd @ WVRC Digital
  * Text Domain: radio-station-manager
  */
