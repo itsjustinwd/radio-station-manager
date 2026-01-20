@@ -32,7 +32,7 @@ function rsm_display_hero_slider() {
                     $overlay_opacity = get_field('overlay_opacity') ?: 0;
                     $overlay_color = get_field('overlay_color') ?: '#000000';
                     
-                    // NEW: Get the slide link
+                    // Get the slide link
                     $slide_link_url = get_field('slide_link_url');
                     
                     $heading_color = get_field('heading_color') ?: '#ffffff';
@@ -52,12 +52,14 @@ function rsm_display_hero_slider() {
                     
                     $slide_class = 'hero-slide-' . $slide_index;
                     
-                    // NEW: Check if slide should be clickable
+                    // Check if slide should be clickable and get target
                     $has_slide_link = !empty($slide_link_url);
+                    $new_tab = get_field('slide_link_new_tab');
+                    $target = ($has_slide_link && $new_tab) ? ' target="_blank" rel="noopener noreferrer"' : '';
                 ?>
                 <li class="splide__slide <?php echo $slide_class; ?> <?php echo $has_slide_link ? 'has-slide-link' : ''; ?>">
                     <?php if ($has_slide_link): ?>
-                    <a href="<?php echo esc_url($slide_link_url); ?>" class="hero-slide-link">
+                    <a href="<?php echo esc_url($slide_link_url); ?>" class="hero-slide-link"<?php echo $target; ?>>
                     <?php endif; ?>
                     
                         <div class="hero-slide-wrapper" style="background-image: url('<?php echo esc_url($bg_image['url']); ?>');">
