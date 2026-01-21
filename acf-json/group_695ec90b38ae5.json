@@ -1,0 +1,75 @@
+{
+    "key": "group_695ec90b38ae5",
+    "title": "Concerts",
+    "fields": [
+        {
+            "key": "field_695ec90ba8ebb",
+            "label": "Concert Image",
+            "name": "concert_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_695ec929a8ebc",
+            "label": "Event Date",
+            "name": "event_date",
+            "type": "date_picker",
+            "display_format": "d/m/Y",
+            "return_format": "Ymd",
+            "first_day": 1
+        },
+        {
+            "key": "field_695ec941a8ebd",
+            "label": "Venue Name",
+            "name": "venue_name",
+            "type": "text"
+        },
+        {
+            "key": "field_695ec94ca8ebe",
+            "label": "Venue Address",
+            "name": "venue_address",
+            "type": "text"
+        },
+        {
+            "key": "field_695ec953a8ebf",
+            "label": "City",
+            "name": "city",
+            "type": "text"
+        },
+        {
+            "key": "field_695ec961a8ec0",
+            "label": "State",
+            "name": "state",
+            "type": "text"
+        },
+        {
+            "key": "field_695ec968a8ec1",
+            "label": "Ticket Link",
+            "name": "ticket_link",
+            "type": "text"
+        },
+        {
+            "key": "field_695ec971a8ec2",
+            "label": "Ticket Price",
+            "name": "ticket_price",
+            "type": "text"
+        },
+        {
+            "key": "field_695ec999a8ec3",
+            "label": "Show Time",
+            "name": "show_time",
+            "type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "concert"
+            }
+        ]
+    ],
+    "active": true
+}

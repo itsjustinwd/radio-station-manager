@@ -1,0 +1,54 @@
+/* ==========================================
+   AD UNITS
+   ========================================== */
+
+/* Ad Unit Containers */
+.rsm-ad-unit {
+    text-align: center;
+    margin: 20px auto;
+    clear: both;
+}
+
+/* Header Ad - 728x90 */
+.rsm-header-ad {
+    max-width: 728px;
+    margin: 20px auto;
+    padding: 10px 0;
+}
+
+/* Mid-Content Ad - 728x90 */
+.rsm-mid-content-ad {
+    max-width: 728px;
+    margin: 30px auto;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Sidebar Ads - 300x250 */
+.rsm-sidebar-top-ad,
+.rsm-sidebar-bottom-ad {
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .rsm-header-ad,
+    .rsm-mid-content-ad {
+        max-width: 100%;
+        padding: 15px 10px;
+    }
+    
+    .rsm-sidebar-top-ad,
+    .rsm-sidebar-bottom-ad {
+        max-width: 300px;
+        margin: 20px auto;
+    }
+}
+
+/* Ensure ads don't break layout */
+.rsm-ad-unit img {
+    max-width: 100%;
+    height: auto;
+}

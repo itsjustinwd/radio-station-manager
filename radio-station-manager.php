@@ -22,6 +22,32 @@ require_once RSM_PLUGIN_DIR . 'includes/shortcodes-schedule.php';
 require_once RSM_PLUGIN_DIR . 'includes/shortcodes-hero.php';
 require_once RSM_PLUGIN_DIR . 'includes/shortcodes-concert.php';
 require_once RSM_PLUGIN_DIR . 'includes/template-functions.php';
+require_once RSM_PLUGIN_DIR . 'includes/ads.php';
+
+// Create ACF Options Pages
+function rsm_add_options_pages() {
+    if (function_exists('acf_add_options_page')) {
+        // Main options page
+        acf_add_options_page(array(
+            'page_title'  => 'Radio Station Manager',
+            'menu_title'  => 'Radio Station',
+            'menu_slug'   => 'radio-station-manager',
+            'capability'  => 'manage_options',
+            'icon_url'    => 'dashicons-admin-site',
+            'position'    => 20,
+        ));
+        
+        // Add Ads submenu
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Ad Management',
+            'menu_title'  => 'Ads',
+            'parent_slug' => 'radio-station-manager',
+            'menu_slug'   => 'radio-station-ads',
+            'capability'  => 'manage_options',
+        ));
+    }
+}
+add_action('acf/init', 'rsm_add_options_pages');
 
 // Enqueue styles and scripts
 function rsm_enqueue_assets() {
@@ -29,6 +55,14 @@ function rsm_enqueue_assets() {
     wp_enqueue_style(
         'rsm-styles',
         RSM_PLUGIN_URL . 'assets/css/radio-station-manager.css',
+        array(),
+        RSM_VERSION
+    );
+    
+    // Ad CSS
+    wp_enqueue_style(
+        'rsm-ads',
+        RSM_PLUGIN_URL . 'assets/css/ads.css',
         array(),
         RSM_VERSION
     );

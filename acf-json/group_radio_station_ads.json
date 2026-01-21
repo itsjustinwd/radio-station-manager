@@ -1,0 +1,304 @@
+{
+    "key": "group_radio_station_ads",
+    "title": "Radio Station Ad Management",
+    "fields": [
+        {
+            "key": "field_header_ad",
+            "label": "Header Ad (728x90 Leaderboard)",
+            "name": "header_ad",
+            "type": "group",
+            "instructions": "Top of page leaderboard ad",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_enable_header_ad",
+                    "label": "Enable Header Ad",
+                    "name": "enable_header_ad",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
+                },
+                {
+                    "key": "field_header_ad_code",
+                    "label": "Ad Code",
+                    "name": "header_ad_code",
+                    "type": "textarea",
+                    "instructions": "Paste your ad code here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_enable_header_ad",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 6,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_mid_content_ad",
+            "label": "Mid-Content Ad (728x90 Leaderboard)",
+            "name": "mid_content_ad",
+            "type": "group",
+            "instructions": "Middle of page leaderboard ad",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_enable_mid_content_ad",
+                    "label": "Enable Mid-Content Ad",
+                    "name": "enable_mid_content_ad",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
+                },
+                {
+                    "key": "field_mid_content_ad_code",
+                    "label": "Ad Code",
+                    "name": "mid_content_ad_code",
+                    "type": "textarea",
+                    "instructions": "Paste your ad code here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_enable_mid_content_ad",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 6,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mid_content_position",
+                    "label": "Insert After Paragraph",
+                    "name": "mid_content_position",
+                    "type": "number",
+                    "instructions": "Which paragraph should the ad appear after? (Default: 2)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_enable_mid_content_ad",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 2,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 1,
+                    "max": "",
+                    "step": 1
+                }
+            ]
+        },
+        {
+            "key": "field_sidebar_top_ad",
+            "label": "Sidebar Top Ad (300x250 Rectangle)",
+            "name": "sidebar_top_ad",
+            "type": "group",
+            "instructions": "Top of sidebar ad",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_enable_sidebar_top_ad",
+                    "label": "Enable Sidebar Top Ad",
+                    "name": "enable_sidebar_top_ad",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
+                },
+                {
+                    "key": "field_sidebar_top_ad_code",
+                    "label": "Ad Code",
+                    "name": "sidebar_top_ad_code",
+                    "type": "textarea",
+                    "instructions": "Paste your ad code here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_enable_sidebar_top_ad",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 6,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_sidebar_bottom_ad",
+            "label": "Sidebar Bottom Ad (300x250 Rectangle)",
+            "name": "sidebar_bottom_ad",
+            "type": "group",
+            "instructions": "Bottom of sidebar ad",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_enable_sidebar_bottom_ad",
+                    "label": "Enable Sidebar Bottom Ad",
+                    "name": "enable_sidebar_bottom_ad",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
+                },
+                {
+                    "key": "field_sidebar_bottom_ad_code",
+                    "label": "Ad Code",
+                    "name": "sidebar_bottom_ad_code",
+                    "type": "textarea",
+                    "instructions": "Paste your ad code here",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_enable_sidebar_bottom_ad",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 6,
+                    "new_lines": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "radio-station-ads"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Manage ad placements across the radio station network"
+}
